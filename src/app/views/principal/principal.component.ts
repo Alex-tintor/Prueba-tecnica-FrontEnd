@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { Product} from 'src/app/models/product/product';
+import { ProductService } from 'src/app/services/product.service';
 
 @Component({
   selector: 'app-principal',
@@ -8,8 +10,15 @@ import { Router } from '@angular/router';
 })
 export class PrincipalComponent implements OnInit {
 
-  constructor(public route:Router) {}
+  public products:Product[];
 
-  ngOnInit(): void {}
+  constructor(private productService:ProductService,public route:Router) { 
+    this.products = productService.productos()
+  }
+  ngOnInit(): void {
+    this.productService.getAllProductos().subscribe(
+      req => this.products = req.content
+    );
+  }
 
 }
