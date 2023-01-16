@@ -1,0 +1,19 @@
+.card:hover{
+    cursor: pointer;
+    box-shadow: 0px 10px 10px 2px rgba(0, 0, 0, 0.443) !important;
+    transform: scale(1.01);
+    transition: .3s;
+}
+.input{
+    border: 1px solid gray;
+}
+.image-pre{
+    width: 300px !important;
+    height: 300px !important;
+    min-width: 300px !important;
+    min-height: 300px !important;
+    object-fit: contain !important;
+}
+.image-pre:hover{
+    cursor: pointer;
+}

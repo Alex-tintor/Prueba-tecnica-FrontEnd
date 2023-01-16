@@ -8,13 +8,10 @@ import { PrincipalComponent } from './views/principal/principal.component';
 import { GeneralCardComponent } from './core/general-card/general-card.component';
 import { HttpClientModule } from '@angular/common/http';
 import { GeneralHeaderComponent } from './core/general-header/general-header.component';
-import { PostComponentComponent } from './views/post-component/post-component.component';
-import { UpdateComponent } from './views/update/update.component';
-import { DeleteComponent } from './views/delete/delete.component';
-import { PatchComponent } from './views/patch/patch.component';
-import { GetComponent } from './views/get/get.component';
 import { MapComponent } from './views/map/map.component';
 import { OlMapComponent } from './core/ol-map/ol-map.component';
+import { ProductosComponent } from './views/productos/productos.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 
 
@@ -24,21 +21,17 @@ import { OlMapComponent } from './core/ol-map/ol-map.component';
     PrincipalComponent,
     GeneralCardComponent,
     GeneralHeaderComponent,
-    PostComponentComponent,
-    UpdateComponent,
-    DeleteComponent,
-    PatchComponent,
-    GetComponent,
     MapComponent,
-    OlMapComponent
+    OlMapComponent,
+    ProductosComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
-    ReactiveFormsModule
-    
+    ReactiveFormsModule,
+    NgbModule
   ],
   providers: [],
   bootstrap: [AppComponent]

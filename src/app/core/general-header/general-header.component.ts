@@ -13,12 +13,4 @@ export class GeneralHeaderComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  private _Seccion : string ="";
-  @Output() EVentSeccion = new EventEmitter();
-  public get Seccion(){return this._Seccion}
-  public set Seccion(seccion:string){
-    this._Seccion = seccion;
-    this.EVentSeccion.emit(this._Seccion)
-  }
-
 }
